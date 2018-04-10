@@ -13,4 +13,7 @@ RUN cd /root \
   && cd cpuminer \
   && ./autogen.sh \
   && ./configure CFLAGS="-O3 -march=native -funroll-loops -fomit-frame-pointer" \
-  && make
+  && make \
+  && mv minerd /usr/bin \
+  && cd /root \
+  && rm -rf cpuminer
